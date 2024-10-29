@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px) rotate(-5deg); }
+  75% { transform: translateX(5px) rotate(5deg); }
+}
+
+.animate-shake {
+  animation: shake 0.3s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes glow {
+  0%, 100% { filter: drop-shadow(0 0 2px rgba(234, 179, 8, 0.8)); }
+  50% { filter: drop-shadow(0 0 10px rgba(234, 179, 8, 0.8)); }
+}
+
+@keyframes cooldown {
+  from { clip-path: circle(100% at 50% 50%); }
+  to { clip-path: circle(0% at 50% 50%); }
+}
